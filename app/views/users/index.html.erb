@@ -11,6 +11,7 @@
     <tr>
       <td> <%= link_to user.user_name, user_path(user) %></td>
       <td>user.about</td>
+      <td> <%= link_to "Edit", edit_user_path(user) %></td>
     </tr>
     <% end %>
   </tbody>
