@@ -11,16 +11,16 @@
       <td>Delete</td>
     </tr>
   </thead>
+
   <tbody>
     <% @courses.each do |course| %>
     <tr>
       <td> <%= link_to course.title, course_path(course) %></td>
-      <td>
-      <% if course.day_or_night == true %>
-          Day
-        <% else %>
-        Night
-      <% end %>
+      <td> <% if course.day_or_night == true %>
+              Day
+            <% else %>
+              Night
+            <% end %>
       </td>
       <td> <%= link_to "Delete Course", course_path(course), method: :delete %></td>
     </tr>
