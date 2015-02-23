@@ -1,0 +1,12 @@
+<h1>Edit Course</h1>
+<%= form_for @course do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :day_or_night %>
+  <%= f.select :day_or_night, [['Day', true],['Night', false]] %>
+
+  <%= f.submit %>
+
+<% end %>
