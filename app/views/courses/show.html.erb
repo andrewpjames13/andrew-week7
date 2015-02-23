@@ -1,8 +1,8 @@
 <p>Title: <%= @course.title %></p>
 <p>Day or Night:
-<% if true %>
-<%= print "Day" %>
-<% else false %>
-<%= print "Night" %>
+<% if @course.day_or_night == true %>
+    Day
+  <% else %>
+  Night
 <% end %>
 </p>
