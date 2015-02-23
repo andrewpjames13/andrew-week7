@@ -1,0 +1,24 @@
+<h1>Courses</h1>
+<p><%= link_to "Create a course", new_course_path %></p>
+<p>
+  <table>
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>|</td>
+      <td>Day or Night</td>
+      <td>|</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+    <tr>
+      <td> <%= link_to course.title, course_path(course) %></td>
+      <td><%= course.day_or_night %></td>
+      <td> <%= link_to "Delete Course", course_path(course), method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</p>

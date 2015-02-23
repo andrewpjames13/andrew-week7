@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   resources :users
+  resources :courses
 
-  root 'users#index'
+  root 'courses#index'
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
   get '/signin' => 'sessions#new'
